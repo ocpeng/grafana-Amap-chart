@@ -1,0 +1,55 @@
+<div class="editor-row">
+  <div class="section gf-form-group">
+    <h5 class="section-heading">General</h5>
+    <div class="gf-form">
+      <span class="gf-form-label width-8">Amap Key</span>
+      <input type="text" class="gf-form-input max-width-100" ng-model="ctrl.panel.AmapKey" ng-change="ctrl.render()">
+    </div>
+  </div>
+
+  <div class="section gf-form-group">
+    <h5 class="section-heading">Options</h5>
+    <div class="gf-form">
+      <span class="gf-form-label width-11">样式</span>
+      <div class="gf-form-select-wrapper width-9">
+        <select class="gf-form-input" ng-model="ctrl.panel.mapStyleType" ng-options="t for t in ['幻影黑','月光银','远山黛','草色青','雅士灰','涂鸦','马卡龙','靛青蓝','极夜蓝','酱籽']"
+                ng-change="ctrl.render()"></select>
+      </div>
+    </div>
+    <div class="gf-form">
+      <span class="gf-form-label width-11">中心坐标X</span>
+      <div class="gf-form-select-wrapper width-9">
+        <input type="text" class="gf-form-input max-width-100" ng-init="ctrl.panel.mapLat='116.481181'" ng-model="ctrl.panel.mapLat" ng-change="ctrl.render()">
+      </div>
+    </div>
+    <div class="gf-form">
+      <span class="gf-form-label width-11">中心坐标Y</span>
+      <div class="gf-form-select-wrapper width-9">
+        <input type="text" class="gf-form-input max-width-100" ng-init="ctrl.panel.mapLng='39.989792'" ng-model="ctrl.panel.mapLng" ng-change="ctrl.render()">
+      </div>
+    </div>
+
+    <div class="gf-form">
+      <span class="gf-form-label width-11">地图级数</span>
+      <div class="gf-form-select-wrapper width-9">
+        <input type="text" class="gf-form-input max-width-50" ng-model="ctrl.panel.mapZoom" ng-change="ctrl.render()">
+      </div>
+    </div>
+  </div>
+
+  <div class="section gf-form-group">
+    <h5 class="section-heading">覆盖物</h5>
+    <div class="gf-form">
+      <gf-form-switch class="gf-form" label-class="width-11" switch-class="max-width-6" label="时间路况" checked="ctrl.panel.trafficLayer" on-change="ctrl.onDataReceived()"></gf-form-switch>   </div>
+    <div class="gf-form">
+      <gf-form-switch class="gf-form" label-class="width-11" switch-class="max-width-6" label="右键菜单" checked="ctrl.panel.menu" on-change="ctrl.onDataReceived()"></gf-form-switch>   </div>
+    <div class="gf-form">
+      <gf-form-switch class="gf-form" label-class="width-11" switch-class="max-width-6" label="放大工具" checked="ctrl.panel.scale" on-change="ctrl.onDataReceived()"></gf-form-switch>   </div>
+    <div class="gf-form">
+      <gf-form-switch class="gf-form" label-class="width-11" switch-class="max-width-6" label="工具栏" checked="ctrl.panel.toolBar" on-change="ctrl.onDataReceived()"></gf-form-switch>   </div>
+    <div>
+      <select class="gf-form-input" ng-model="ctrl.panel.valueClusterer" ng-options="v for v in ['normal','usual','typical']"  ng-change="ctrl.render()"></select>
+    </div>
+  </div>
+
+</div>

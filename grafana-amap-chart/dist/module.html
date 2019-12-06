@@ -1,0 +1,120 @@
+
+<style>
+
+  ng-amap {
+    display: block;
+    width: 600px;
+    height: 500px;
+  }
+  .amap_chart_panel_container {
+    height: 100%;
+
+  }
+
+  .content-window-card {
+    position: relative;
+    box-shadow: none;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    padding: 0;
+  }
+
+  .content-window-card p {
+    height: 2rem;
+  }
+
+  .custom-info {
+    border: solid 1px silver;
+  }
+
+  div.info-top {
+    position: relative;
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-bottom: 1px solid #CCC;
+    border-radius: 5px 5px 0 0;
+  }
+
+  div.info-top div {
+    display: inline-block;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 31px;
+    padding: 0 10px;
+  }
+
+  div.info-top img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition-duration: 0.25s;
+  }
+
+  div.info-top img:hover {
+    box-shadow: 0px 0px 5px #000;
+  }
+
+  div.info-middle {
+    font-size: 12px;
+    padding: 10px 6px;
+    line-height: 20px;
+  }
+
+  div.info-bottom {
+    height: 0px;
+    width: 100%;
+    clear: both;
+    text-align: center;
+  }
+
+  div.info-bottom img {
+    position: relative;
+    z-index: 104;
+  }
+
+  span {
+    margin-left: 5px;
+    font-size: 11px;
+  }
+
+  .info-middle img {
+    float: left;
+    margin-right: 6px;
+  }
+  .info hr {
+      margin-right: 0;
+      margin-left: 0;
+      border-top-color: grey;
+  }
+
+  .info {
+      padding: .75rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: .25rem;
+      position: absolute;
+      top: 1.6rem;
+      background-color: #292929;
+      width: auto;
+      min-width: 90%;
+      border-width: 1;
+      right: 0.7rem;
+      box-shadow: 0 0px 110px 0 rgba(114, 124, 245, .5);
+  }
+  .context_menu{
+      position: relative;
+      min-width: 12rem;
+      padding: 0;
+  }
+
+  .context_menu p{
+      cursor: pointer;
+      padding: 0.25rem 1.25rem;
+  }
+
+  .context_menu p:hover{
+      background: #ccc;
+  }
+</style>
+<div class="amap_chart_panel_container"></div>
+<div id="tip" class="info"></div>
