@@ -5,7 +5,7 @@
 
 
 # 1. 安装
-直接将插件复制到grafan目录下，默认目录为/var/lib/grafana/plugins/
+直接将插件复制到grafana目录下，默认目录为/var/lib/grafana/plugins/
 
 # 2. 重启grafana
 service grafana restart
