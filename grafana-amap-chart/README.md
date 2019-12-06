@@ -1,30 +1,30 @@
-# ÁÁµã£º¸ÄÔìAmap£¬´òÍ¨MongoDBÊı¾İÔ´£¬Õ¹Ê¾ÖĞ¹úµØÍ¼
-* grafana°æ±¾ v6.2.5
-* 20191206·¢²¼
-* ÈçÄÜ°ïÖúµ½Äú£¬»¶Ó­¸øÓëÖ§³Ö£¬Ğ»Ğ»
+# äº®ç‚¹ï¼šè‡ªç ”Amapæ’ä»¶ï¼Œæ‰“é€šMongoDBæ•°æ®æºï¼Œå±•ç¤ºä¸­å›½åœ°å›¾
+* grafanaç‰ˆæœ¬ v6.2.5
+* 20191206å‘å¸ƒ
+* å¦‚èƒ½å¸®åŠ©åˆ°æ‚¨ï¼Œæ¬¢è¿ç»™ä¸æ”¯æŒï¼Œè°¢è°¢
 
 
-# 1. °²×°
-Ö±½Ó½«²å¼ş¸´ÖÆµ½grafanÄ¿Â¼ÏÂ£¬Ä¬ÈÏÄ¿Â¼Îª/var/lib/grafana/plugins/
+# 1. å®‰è£…
+ç›´æ¥å°†æ’ä»¶å¤åˆ¶åˆ°grafanç›®å½•ä¸‹ï¼Œé»˜è®¤ç›®å½•ä¸º/var/lib/grafana/plugins/
 
-# 2. ÖØÆôgrafana
+# 2. é‡å¯grafana
 service grafana restart
 
-# 3. ÒòÎªMongoDB´æ´¢¾­Î³¶È±È½Ï¹ã·º£¬Ñ¡ÔñMongoDBÊı¾İÔ´£¬ÌîĞ´SQL
-* ¹ØÓÚMongoDBÊı¾İÔ´ÈçºÎÅäÖÃ£¬Çë²Î¿¼https://github.com/JamesOsgood/mongodb-grafana
+# 3. å› ä¸ºMongoDBå­˜å‚¨ç»çº¬åº¦æ¯”è¾ƒå¹¿æ³›ï¼Œé€‰æ‹©MongoDBæ•°æ®æºï¼Œå¡«å†™SQL
+* å…³äºMongoDBæ•°æ®æºå¦‚ä½•é…ç½®ï¼Œè¯·å‚è€ƒhttps://github.com/JamesOsgood/mongodb-grafana
 * db.escrowCarInfo.aggregate ( [ 
 * { "$match" :   {"point":{"$ne":null, "$exists":true},"overview.soc":{"$ne":null, "$exists":true},"use_nature":{"$ne":1}}  },                  
-* {"$project" :   {"³ÇÊĞ":"$cityName","³µ¼İºÅ":"$vin","³µĞÍ":"$modelName","ÑÕÉ«":"$carColor","Ê¹ÓÃĞÔÖÊ":"$use_nature","³µÅÆ":"$licenseNo","×ÜÀï³Ì":"$mileage", "point":"$point", "µçÁ¿":"$overview.soc", "ÉÏ±¨Ê±¼ä":"$pointTime",  "_id" : 0} } ,
+* {"$project" :   {"åŸå¸‚":"$cityName","è½¦é©¾å·":"$vin","è½¦å‹":"$modelName","é¢œè‰²":"$carColor","ä½¿ç”¨æ€§è´¨":"$use_nature","è½¦ç‰Œ":"$licenseNo","æ€»é‡Œç¨‹":"$mileage", "point":"$point", "ç”µé‡":"$overview.soc", "ä¸ŠæŠ¥æ—¶é—´":"$pointTime",  "_id" : 0} } ,
 * { "$limit":500000},
 * { "$skip":2}
 * ])
-* ×¢ÒâÀàĞÍÒ»¶¨ÒªÑ¡Ôñtable
+* æ³¨æ„ç±»å‹ä¸€å®šè¦é€‰æ‹©table
 
 
-# 4. demoÍ¼Æ¬
-* ÉèÖÃ, ×ÔĞĞÉêÇëamap key
+# 4. demoå›¾ç‰‡
+* è®¾ç½®, è‡ªè¡Œç”³è¯·amap key
 ![Image text](https://raw.githubusercontent.com/ocpeng/grafana-amap-chart/master/grafana-amap-chart/demo/01.png)
-* Ğ§¹ûÕ¹Ê¾
+* æ•ˆæœå±•ç¤º
 ![Image text](https://raw.githubusercontent.com/ocpeng/grafana-amap-chart/master/grafana-amap-chart/demo/02.png)
-* ÈçÄÜ°ïÖúµ½Äú£¬»¶Ó­¸øÓëÖ§³Ö£¬Ğ»Ğ»
+* å¦‚èƒ½å¸®åŠ©åˆ°æ‚¨ï¼Œæ¬¢è¿ç»™ä¸æ”¯æŒï¼Œè°¢è°¢
 ![Image text](https://raw.githubusercontent.com/ocpeng/grafana-amap-chart/master/grafana-amap-chart/demo/03.png)
