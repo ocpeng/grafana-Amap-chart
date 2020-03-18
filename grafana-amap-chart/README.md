@@ -12,13 +12,8 @@ service grafana restart
 
 # 3. 因为MongoDB存储经纬度比较广泛，选择MongoDB数据源，填写SQL
 * 关于MongoDB数据源如何配置，请参考https://github.com/JamesOsgood/mongodb-grafana
-* db.escrowCarInfo.aggregate ( [ 
-* { "$match" :   {"point":{"$ne":null, "$exists":true},"overview.soc":{"$ne":null, "$exists":true},"use_nature":{"$ne":1}}  },                  
-* {"$project" :   {"城市":"$cityName","车驾号":"$vin","车型":"$modelName","颜色":"$carColor","使用性质":"$use_nature","车牌":"$licenseNo","总里程":"$mileage", "point":"$point", "电量":"$overview.soc", "上报时间":"$pointTime",  "_id" : 0} } ,
-* { "$limit":500000},
-* { "$skip":2}
-* ])
-* 注意类型一定要选择table
+* 使用方法腾讯课堂-搜：grafana运维监控与数据分析
+* 或者，网易云课堂-搜：grafana运维监控与数据分析
 
 
 # 4. demo图片
