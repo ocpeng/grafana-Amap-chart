@@ -21,5 +21,4 @@ service grafana restart
 ![Image text](https://raw.githubusercontent.com/ocpeng/grafana-amap-chart/master/grafana-amap-chart/demo/01.png)
 * 效果展示
 ![Image text](https://raw.githubusercontent.com/ocpeng/grafana-amap-chart/master/grafana-amap-chart/demo/02.png)
-* 如能帮助到您，欢迎给与支持，谢谢
-![Image text](https://raw.githubusercontent.com/ocpeng/grafana-amap-chart/master/grafana-amap-chart/demo/03.png)
+
